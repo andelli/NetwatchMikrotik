@@ -1,7 +1,7 @@
 # Edit Token_Bot and Chat_id according to your monitoring # 
 
 :local bot "[Token_Bot]";
-:local chatID "[Chat_id]";
+:local chatID "[Chat_ID";
 :local varDate;
 :local varDay;
 :local varTime;
@@ -16,4 +16,4 @@
 :set varIdentity [/tool netwatch get value-name=comment number=0];
 :set varStatus [/tool netwatch get value-name=status number=0];
 :set varMon [/system identity get value-name=name];
-/tool fetch url="https://api.telegram.org/bot$bot/sendmessage\?chat_id=$chatID&text=\E2\9C\A8 ALERT NOTIFICATION!!%0AStatus: $varStatus %E2\9C\85 %0AFrom: $varMon  %0A%0AIP: $varHost %0ADescription: $varIdentity %0ADate: $varDate %0ATime: $varTime %0A" keep-result=no;}
+/tool fetch url="https://api.telegram.org/bot$bot/sendmessage\?chat_id=$chatID&text=\E2\9C\A8 ALERT NOTIFICATION!!%0AStatus: $varStatus %E2\9C\85 %0AFrom: $varMon  %0A%0AIP: $varHost %0ADescription: $varIdentity %0ADate: $varDate %0ATime: $varTime %0A" keep-result=no src-address=[IP-Source to Internet];}
